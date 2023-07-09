@@ -1,7 +1,9 @@
 import Form from './Form';
 
-const CreatePrompt = ({ router, session, setSubmitting, post }) => {
-
+const CreatePrompt = ({ router, session, submitting, setSubmitting, post, setPost }) => {
+    
+    {!session && router.push('/')}
+    
     const CreatePrompt = async (e) => {
         e.preventDefault();
         setSubmitting(true);

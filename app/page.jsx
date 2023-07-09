@@ -1,8 +1,11 @@
-import Feed from '@components/Feed';
+import Feed from '@/components/Feed';
+import NavBar from '@/components/NavBar';
 
 const Home = () => {
   return (
     <section className='w-full flex-center flex-col'>
+        <NavBar />
+
         <h1 className='head_text text-center'>
             Helper {">"} Prompt
             <br className='max-md:hidden'/>

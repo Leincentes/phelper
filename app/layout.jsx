@@ -1,7 +1,6 @@
-import '@styles/globals.css';
+import '@/styles/globals.css';
 
-import NavBar from '@components/NavBar';
-import Provider from '@components/Provider';
+import Provider from '@/components/Provider';
 
 export const metadata = { 
     title: 'Phelper',
@@ -17,7 +16,6 @@ const RootLayout = ({ children }) => {
                     <div className='gradient'/>
                 </div>
                 <main className='app'>
-                    <NavBar />
                     {children}
                 </main>
             </Provider>

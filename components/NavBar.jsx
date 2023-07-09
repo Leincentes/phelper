@@ -53,7 +53,6 @@ const NavBar = () => {
                             Sign In
                         </button>
                     ))}
-                    {/* {router.push('/')} */}
                 </>
             )}
         </div>
@@ -88,7 +87,7 @@ const NavBar = () => {
                             Sign In
                         </button>
                     ))}
-                    {router.push('/')}
+                    {/* {router.push('/')} */}
                 </>
             )}
         </div>

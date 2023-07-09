@@ -1,4 +1,4 @@
-// import GptPromptCard from "@components/GptPromptCard";
+// import GptPromptCard from "@/components/GptPromptCard";
 
 // const page = () => {
 //   return (

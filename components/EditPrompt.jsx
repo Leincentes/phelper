@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
 import Form from './Form';
 
-const EditPrompt = ({ router, promptId, post, submitting, setSubmitting, setPost }) => {
-
-    useEffect(() => {
-        const getPromptDetails = async () => {
-            const response = await fetch(`/api/prompt/${promptId}`);
-            const data = await response.json();
-
-            setPost({
-                prompt: data.prompt,
+const EditPrompt = ({ session, router, promptId, post, submitting, setSubmitting, setPost }) => {
+  
+  useEffect(() => {
+    const getPromptDetails = async () => {
+      const response = await fetch(`/api/prompt/${promptId}`);
+      const data = await response.json();
+      
+      setPost({
+        prompt: data.prompt,
                 tag: data.tag,
             })
         }
@@ -39,6 +39,7 @@ const EditPrompt = ({ router, promptId, post, submitting, setSubmitting, setPost
         } finally {
             setSubmitting(false);
         }
+        
       };
 
   return (

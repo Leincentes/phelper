@@ -3,6 +3,8 @@ import Profile from './Profile';
 
 const MyProfile = ({ session, setPosts, router, setMyPosts, posts }) => {
   
+    {!session && router.push('/')}
+    
     useEffect(() => {
       const fetchPosts = async () => { 
           const response = await fetch(`/api/users/${session?.user.id}/posts`);
