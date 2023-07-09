@@ -6,7 +6,6 @@ import CreatePrompt from '@/components/CreatePrompt';
 import Link from 'next/link';
 
 const create_prompt = () => {
-  const href = '/';
   const {data: session} = useSession();
   
   const [submitting, setSubmitting] = useState(false);
@@ -15,12 +14,12 @@ const create_prompt = () => {
     tag: '',
   });
   
-  {!session && <Link href={href} />}
+  {!session && <Link href={'/'} />}
   
   return (
     <>
       <CreatePrompt 
-        href={href}
+        href={'/'}
         session={session}
         submitting={submitting}
         setSubmitting={setSubmitting}
