@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
-const Nav = () => {
+const NavBar = () => {
     const router = useRouter();
     const { data: session } = useSession();
     const [providers, setProviders] = useState(null);
@@ -33,10 +33,9 @@ const Nav = () => {
         <div className='sm:flex hidden'>
             {session?.user ? (
                     <div className='flex gap-3 md:gap-5'>
-                        <Link href='/gpt-ai' className='outline_btn'>
+                        {/* <Link href='/gpt-ai' className='outline_btn'>
                             GPT-AI
-                        </Link>
-
+                        </Link> */}
                         <Link href='/create-prompt' className='black_btn'>
                             Create Post
                         </Link>
@@ -54,7 +53,7 @@ const Nav = () => {
                             Sign In
                         </button>
                     ))}
-                    {router.push('/')}
+                    {/* {router.push('/')} */}
                 </>
             )}
         </div>
@@ -97,4 +96,4 @@ const Nav = () => {
   )
 }
 
-export default Nav;
+export default NavBar;

@@ -1,11 +1,11 @@
-import GptPromptCard from "@components/GptPromptCard";
+// import GptPromptCard from "@components/GptPromptCard";
 
-const GPTAI = () => {
-  return (
-    <>
-      <GptPromptCard />
-    </>
-  )
-}
+// const page = () => {
+//   return (
+//     <>
+//       <GptPromptCard />
+//     </>
+//   )
+// }
 
-export default GPTAI;
+// export default page;
