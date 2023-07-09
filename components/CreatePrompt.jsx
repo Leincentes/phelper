@@ -1,10 +1,9 @@
+import Link from 'next/link';
 import Form from './Form';
 
-const CreatePrompt = ({ router, session, submitting, setSubmitting, post, setPost }) => {
+const CreatePrompt = ({ href, session, submitting, setSubmitting, post, setPost }) => {
     
-    {!session && router.push('/')}
-    
-    const CreatePrompt = async (e) => {
+    const PromptCreation = async (e) => {
         e.preventDefault();
         setSubmitting(true);
         try {
@@ -16,7 +15,7 @@ const CreatePrompt = ({ router, session, submitting, setSubmitting, post, setPos
                     tag: post.tag
                 })
             })
-            response.ok && router.push('/');
+            response.ok && <Link href={href} />
         } catch (error) {
             console.log(error);
         } finally {
@@ -30,7 +29,7 @@ const CreatePrompt = ({ router, session, submitting, setSubmitting, post, setPos
         post={post}
         setPost={setPost}
         submitting={submitting}
-        handleSubmit={CreatePrompt}
+        handleSubmit={PromptCreation}
     />
   )
 }

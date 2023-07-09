@@ -2,12 +2,11 @@
 
 import { useState } from 'react';
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 import CreatePrompt from '@/components/CreatePrompt';
+import Link from 'next/link';
 
 const create_prompt = () => {
-  
-  const router = useRouter();
+  const href = '/';
   const {data: session} = useSession();
   
   const [submitting, setSubmitting] = useState(false);
@@ -16,12 +15,12 @@ const create_prompt = () => {
     tag: '',
   });
   
-  {!session && router.push('/')}
+  {!session && <Link href={href} />}
   
   return (
     <>
       <CreatePrompt 
-        router={router}
+        href={href}
         session={session}
         submitting={submitting}
         setSubmitting={setSubmitting}

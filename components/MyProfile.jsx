@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import Profile from './Profile';
+import Link from 'next/link';
 
-const MyProfile = ({ session, setPosts, router, setMyPosts, posts }) => {
-  
-    {!session && router.push('/')}
+const MyProfile = ({ session, setPosts, setMyPosts, posts }) => {
     
     useEffect(() => {
       const fetchPosts = async () => { 
@@ -17,7 +16,7 @@ const MyProfile = ({ session, setPosts, router, setMyPosts, posts }) => {
     }, []);
 
     const handleEdit = (post) => {
-        router.push(`/update-prompt?id=${post._id}`);
+        <Link href={`/update_prompt?id=${post._id}`}/>
     }
     const handleDelete = async (post) => {
         const hasConfirmed = confirm(

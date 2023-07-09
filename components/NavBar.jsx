@@ -33,10 +33,10 @@ const NavBar = () => {
         <div className='sm:flex hidden'>
             {session?.user ? (
                     <div className='flex gap-3 md:gap-5'>
-                        {/* <Link href='/gpt-ai' className='outline_btn'>
+                        <Link href='/gpt_ai' className='outline_btn'>
                             GPT-AI
-                        </Link> */}
-                        <Link href='/create-prompt' className='black_btn'>
+                        </Link>
+                        <Link href='/create_prompt' className='black_btn'>
                             Create Post
                         </Link>
                         <button type='button' onClick={signOut} className='outline_btn'>
